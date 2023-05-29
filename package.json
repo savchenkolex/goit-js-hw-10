@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/savchenkolex/goit-js-hw-10/issues"
   },
-  "homepage": "https://github.com/savchenkolex/goit-js-hw-10#readme",
+  "homepage": "https://github.com/savchenkolex/goit-js-hw-10/",
   "dependencies": {
     "modern-normalize": "^2.0.0",
     "parcel": "^2.9.1"
