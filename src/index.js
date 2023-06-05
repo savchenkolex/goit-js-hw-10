@@ -1,3 +1,4 @@
+import Notiflix from 'notiflix';
 import { fetchBreeds, fetchCatByBreed } from "./cat-api.js";
 import SlimSelect from 'slim-select';
 
@@ -44,8 +45,12 @@ function selectElHandler(event){
     </div>
     `;
     catInfoDiv.innerHTML = catInfoCode;
-    }).catch(error => console.log(error));
-    setTimeout(hideLoader, 10000);
+    }).catch(error => {
+        console.log(error);
+        const e = error;
+        Notiflix.Notify.failure(`Error: ${e}`);
+    });
+    setTimeout(hideLoader, 2500);
 }
 
 // window.onload = (event) => {
