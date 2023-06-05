@@ -25,10 +25,12 @@
   "homepage": "https://github.com/savchenkolex/goit-js-hw-10/",
   "dependencies": {
     "modern-normalize": "^2.0.0",
-    "parcel": "^2.9.1"
+    "parcel": "^2.9.1",
+    "slim-select": "^2.5.0"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.9.1",
     "parcel-reporter-clean-dist": "^1.0.4"
   }
 }
