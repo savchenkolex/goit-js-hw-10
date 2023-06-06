@@ -39,7 +39,7 @@ function selectElHandler(event){
     const breedId = selectEl.value;
     
     if (breedId === " ") {
-       
+        setTimeout(hideLoader, 2500);
         return breedId;
     }
     fetchCatByBreed(breedId).then(data => {
