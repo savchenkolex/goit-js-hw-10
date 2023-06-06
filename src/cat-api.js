@@ -26,7 +26,7 @@ export function fetchBreeds(){
     }
 
     export function fetchCatByBreed(breedId){
-        console.log(breedId);
+        // console.log(breedId);
         return fetch(`${API_URL}images/search?breed_ids=${breedId}`, {method:"GET",headers:API_HEADERS}).then(req => 
             {if(!req.ok){
                 throw new Error(req.error);

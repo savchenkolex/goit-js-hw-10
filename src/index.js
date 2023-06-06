@@ -20,9 +20,16 @@ function createBreedsList(data){
             return {text: name, value: id};
         });
         // selectEl.append(...result);
+        const emptyObj = {text: " ", value: " "};
+        
+        result.unshift(emptyObj);
+
         new SlimSelect({
             select: '.breed-select',
             data: result,
+            settings: {
+                allowDeselect: true
+              }
           })
 
     }
@@ -30,6 +37,11 @@ function createBreedsList(data){
 function selectElHandler(event){
     loaderEl.classList.remove("visually-hidden");
     const breedId = selectEl.value;
+    
+    if (breedId === " ") {
+       
+        return breedId;
+    }
     fetchCatByBreed(breedId).then(data => {
         const catImgURL = data[0].url;
         const catBreedInfo = data[0].breeds[0];
